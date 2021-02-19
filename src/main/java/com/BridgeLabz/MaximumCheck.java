@@ -76,4 +76,18 @@ public class MaximumCheck<T extends Comparable<T>> {
         System.out.println("Maximum Value is " + list.get(list.size() - 1));
         return list.get(list.size() - 1);
     }
+
+    /* maximum of values at test position */
+    public static <T extends Comparable<T>> T maximumOfObjectOptional(T maximum, T... values) {
+        for (T value : values) {
+            if (value.compareTo(maximum) > 0)
+                maximum = value;
+        }
+        return maximum;
+    }
+
+    // Method for printing max of three variables of any type
+    public static <T> void printMaximumValue(T firstValue, T secondValue, T thirdValue, T maximumValue) {
+        System.out.println("The maximum of " + firstValue + "," + secondValue + "," + thirdValue + " is " + maximumValue);
+    }
 }
