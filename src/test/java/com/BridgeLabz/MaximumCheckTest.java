@@ -94,4 +94,25 @@ public class MaximumCheckTest {
         Assert.assertEquals((String) "Sogeti", maximumObject);
     }
 
+    /* Maximum Integer among the given Generic set */
+    @Test
+    public void given_Generic_IntegerValues_returns_true() {
+        Integer maxValueInteger = new MaximumCheck<Integer>(6, 7, 8).findMaxValueAtAnyPosition();
+        Assert.assertEquals((Integer) 8, maxValueInteger);
+    }
+
+    /* Maximum Float among the given Generic set */
+    @Test
+    public void given_Generic_FloatValues_returns_true() {
+        Float maxValueFloat = new MaximumCheck<Float>(6.9f, 9.9f, 8.0f).findMaxValueAtAnyPosition();
+        Assert.assertEquals((Float) 9.9f, maxValueFloat);
+    }
+
+    /* Maximum String among the given Generic set */
+    @Test
+    public void given_Generic_StringValues_returns_true() {
+        String maxValueString = new MaximumCheck<String>("Yahoo", "Google", "Microsoft").findMaxValueAtAnyPosition();
+        Assert.assertEquals((String) "Yahoo", maxValueString);
+    }
+
 }
