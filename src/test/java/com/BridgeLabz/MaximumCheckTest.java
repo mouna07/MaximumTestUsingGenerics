@@ -115,4 +115,25 @@ public class MaximumCheckTest {
         Assert.assertEquals((String) "Yahoo", maxValueString);
     }
 
+    /* Maximum Integer Value in multiple argument case */
+    @Test
+    public void givenVarArguments_return_maxInteger_as_true() {
+        Integer maxValueInteger = MaximumCheck.maximumOfObject(46, 87, 98, 354, 23, 54, 65, 5, 23, 12, 214);
+        Assert.assertEquals((Integer) 354, maxValueInteger);
+    }
+
+    /* Maximum Float Value in multiple argument case */
+    @Test
+    public void givenVarArguments_return_maxFloat_as_true() {
+        Float maxValueInteger = MaximumCheck.maximumOfObject(999.99f, 999.998f, 999.9989f, 999.997f, 999.0f, 996f);
+        Assert.assertEquals((Float) 999.9989f, maxValueInteger);
+    }
+
+    /* Maximum String Value in multiple argument case */
+    @Test
+    public void givenVarArguments_return_maxString_as_true() {
+        String maxValueInteger = MaximumCheck.maximumOfObject("Rcb", "Mi", "Kkr", "Csk", "Kxip", "Srh", "Rr", "Dc");
+        Assert.assertEquals((String) "Srh", maxValueInteger);
+    }
+
 }
