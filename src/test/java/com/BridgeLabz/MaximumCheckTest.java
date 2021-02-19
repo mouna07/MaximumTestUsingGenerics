@@ -73,4 +73,25 @@ public class MaximumCheckTest {
         Assert.assertEquals("Peach", maximumString);
     }
 
+    /* Maximum Integer among the given Generic set */
+    @Test
+    public void maximumObjectInteger() {
+        Integer maximumObject = MaximumCheck.maximumOfObject(240, 250, 220);
+        Assert.assertEquals((Integer) 250, maximumObject);
+    }
+
+    /* Maximum Float among the given Generic set */
+    @Test
+    public void maximumObjectFloat() {
+        Float maximumObject = MaximumCheck.maximumOfObject(9.999f, 10.001f, 10.0f);
+        Assert.assertEquals((Float) 10.001f, maximumObject);
+    }
+
+    /* Maximum String among the given Generic set */
+    @Test
+    public void maximumObjectString() {
+        String maximumObject = MaximumCheck.maximumOfObject("BridgeLabz", "Capgemini", "Sogeti");
+        Assert.assertEquals((String) "Sogeti", maximumObject);
+    }
+
 }
